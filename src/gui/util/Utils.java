@@ -9,4 +9,13 @@ public class Utils {
 	public static Stage currentStarge (ActionEvent event) {
 		return (Stage) ((Node) event.getSource()).getScene().getWindow();
 	}
+	
+	public static Integer tryParseToInt (String srt) {
+		try {
+			return Integer.parseInt(srt);
+		} 
+		 catch (NumberFormatException e) {
+			 return null;
+		 }
+	}
 }
